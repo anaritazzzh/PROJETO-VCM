@@ -104,7 +104,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-        // Estas informações você pega no Console do Firebase (Configurações do Projeto)
+        
         const firebaseConfig = {
             apiKey: "SUA_API_KEY",
             authDomain: "seu-projeto.firebaseapp.com",
@@ -117,7 +117,7 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // Torna a função de salvar acessível globalmente
+
         window.salvarRelato = async function (texto) {
             try {
                 const docRef = await addDoc(collection(db, "relatos"), {
