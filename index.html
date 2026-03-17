@@ -3,96 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alerta Feminicídio | Conscientização</title>
+    <title>Observatório Feminino</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <button id="btnSairRapido">SAIR RÁPIDO (ESC)</button>
+    <button id="btnSairRapido" class="panic-button">SAIR AGORA (ESC)</button>
 
-    <header>
+    <header class="main-header">
+        <div class="logo">OBSERVATÓRIO<span>FEMININO</span></div>
         <nav>
-            <div class="logo">Observatório Feminino</div>
-            <ul>
-                <li><a href="#dados">Estatísticas</a></li>
-                <li><a href="#ciclo">O Ciclo</a></li>
-                <li><a href="#tipos">Tipos de Violência</a></li>
-                <li><a href="#ajuda">Canais de Apoio</a></li>
+            <ul id="main-nav">
+                <li><a href="#" data-page="home" class="active">Início</a></li>
+                <li><a href="#" data-page="dados">Feminicídio</a></li>
+                <li><a href="#" data-page="ciclo">O Ciclo</a></li>
+                <li><a href="#" data-page="ajuda">Canais de Apoio</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="dados" class="container">
-        <h2 class="titulo-secao">O Aumento do Feminicídio no Brasil</h2>
-        <p class="intro-texto">O feminicídio é o assassinato de mulheres cometido em razão do gênero. Os números no Brasil são alarmantes e crescentes.</p>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="numero">1.463</span>
-                <p>Mulheres foram vítimas de feminicídio em 2023, o maior número desde que a lei foi criada.</p>
+    <main id="content-area">
+        <section id="home" class="page active">
+            <div class="hero-content">
+                <h1>Rompa o Silêncio.</h1>
+                <p>O feminicídio é evitável. Conhecer os sinais salva vidas.</p>
+                <button onclick="changePage('dados')" class="btn-proximo">Ver Estatísticas →</button>
             </div>
-            <div class="stat-card">
-                <span class="numero">1 a cada 6h</span>
-                <p>Uma mulher é morta no Brasil pelo fato de ser mulher.</p>
-            </div>
-            <div class="stat-card">
-                <span class="numero">+1.6%</span>
-                <p>Aumento real nos casos registrados em comparação ao ano anterior.</p>
-            </div>
-        </div>
+        </section>
 
-        <div class="info-detalhada">
-            <h3>Por que os números crescem?</h3>
-            <p>Especialistas apontam que o aumento se deve à dificuldade de denúncia, ao desmonte de políticas públicas e ao crescimento do discurso de ódio. <strong>A maioria dos crimes (cerca de 70%) acontece dentro de casa</strong>, cometidos por parceiros ou ex-parceiros.</p>
-        </div>
-    </section>
+        <section id="dados" class="page">
+            <h2 class="section-title">O Aumento dos Casos</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="counter" data-target="1463">0</h3>
+                    <p>Feminicídios em 2023 (Recorde)</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="70">0</h3>
+                    <p>% ocorrem dentro de casa</p>
+                </div>
+            </div>
+            <p class="texto-informativo">O Brasil registrou um aumento de 1,6% nos casos. A maioria das vítimas não possuía medidas protetivas.</p>
+        </section>
 
-    <section id="ciclo" class="ciclo-container">
-        <h2>Entenda o Ciclo da Violência</h2>
-        <p>A violência doméstica raramente começa com uma agressão física grave. Ela segue um padrão circular:</p>
-        
-        <div class="fases-ciclo">
-            <div class="fase">
-                <h4>1. Tensão</h4>
-                <p>Insultos, crises de ciúmes e destruição de objetos. A vítima tenta acalmar o agressor.</p>
+        <section id="ciclo" class="page">
+            <h2 class="section-title">As Três Fases do Ciclo</h2>
+            <div class="ciclo-lista">
+                <div class="fase-item"><strong>1. Tensão:</strong> Ameaças e humilhações.</div>
+                <div class="fase-item"><strong>2. Explosão:</strong> A agressão física ou grave.</div>
+                <div class="fase-item"><strong>3. Lua de Mel:</strong> O falso arrependimento.</div>
             </div>
-            <div class="fase">
-                <h4>2. Explosão</h4>
-                <p>Agressão física, verbal ou sexual descontrolada. É o momento de maior risco.</p>
-            </div>
-            <div class="fase">
-                <h4>3. Lua de Mel</h4>
-                <p>O agressor pede perdão, chora e jura que vai mudar. O ciclo se reinicia pouco depois.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="tipos" class="container">
-        <h2 class="titulo-secao">Formas de Violência (Lei Maria da Penha)</h2>
-        <div class="cards-grid">
-            <div class="card">
-                <h3>Psicológica</h3>
-                <p>Humilhação, manipulação e isolamento de amigos/família.</p>
+        <section id="ajuda" class="page">
+            <h2 class="section-title">Onde buscar ajuda?</h2>
+            <div class="contatos-grid">
+                <div class="card-ajuda">
+                    <h3>Ligue 180</h3>
+                    <p>Central de Atendimento à Mulher</p>
+                </div>
+                <div class="card-ajuda">
+                    <h3>Ligue 190</h3>
+                    <p>Polícia Militar (Emergências)</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Patrimonial</h3>
-                <p>Retenção de documentos, quebra de celular ou controle do salário.</p>
-            </div>
-            <div class="card">
-                <h3>Moral</h3>
-                <p>Calúnia, difamação ou injúria perante terceiros.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="ajuda">
-        <h2>Não se cale. Peça ajuda.</h2>
-        <div class="lista-ajuda">
-            <p><strong>Ligue 180:</strong> Central de Atendimento à Mulher (Anônimo e 24h)</p>
-            <p><strong>Ligue 190:</strong> Polícia Militar (Emergência)</p>
-            <p><strong>Defensoria Pública:</strong> Orientação jurídica gratuita.</p>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
