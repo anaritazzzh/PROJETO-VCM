@@ -1,0 +1,68 @@
+:root {
+    --primaria: #2d0a4e;
+    --secundaria: #8e24aa;
+    --detalhe: #f48fb1;
+    --fundo: #fdfbff;
+    --texto: #212121;
+}
+
+body { font-family: 'Inter', sans-serif; background: var(--fundo); color: var(--texto); line-height: 1.6; }
+
+/* Botão Sair Rápido - Design de Alerta */
+#btnSairRapido {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff1744;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 23, 68, 0.4);
+    z-index: 9999;
+}
+
+header { background: var(--primaria); padding: 20px 5%; color: white; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: white; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Estatísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.numero { font-size: 2.5rem; font-weight: 900; color: var(--secundaria); display: block; }
+
+/* Ciclo da Violência */
+.ciclo-container { background: var(--primaria); color: white; padding: 60px 10%; text-align: center; }
+.fases-ciclo {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.fase {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border: 1px dashed var(--detalhe);
+    border-radius: 10px;
+}
+.fase h4 { color: var(--detalhe); font-size: 1.4rem; margin-bottom: 10px; }
+
+/* Rodapé */
+footer { background: #eee; padding: 50px 10%; text-align: center; }
+.lista-ajuda { margin-top: 20px; font-size: 1.1rem; }
