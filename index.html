@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Observatório Feminino</title>
+    <title>Projeto VCM | Conscientização</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,60 +12,86 @@
     <button id="btnSairRapido" class="panic-button">SAIR AGORA (ESC)</button>
 
     <header class="main-header">
-        <div class="logo">OBSERVATÓRIO<span>FEMININO</span></div>
+        <div class="logo">PROJETO<span>VCM</span></div>
         <nav>
             <ul id="main-nav">
-                <li><a href="#" data-page="home" class="active">Início</a></li>
-                <li><a href="#" data-page="dados">Feminicídio</a></li>
-                <li><a href="#" data-page="ciclo">O Ciclo</a></li>
-                <li><a href="#" data-page="ajuda">Canais de Apoio</a></li>
+                <li><a href="#" data-page="home" class="active">INÍCIO</a></li>
+                <li><a href="#" data-page="dados">FEMINICÍDIO</a></li>
+                <li><a href="#" data-page="ciclo">O CICLO</a></li>
+                <li><a href="#" data-page="ajuda">CONTATOS</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="content-area">
         <section id="home" class="page active">
-            <div class="hero-content">
+            <div class="overlay"></div>
+            <div class="content-wrap">
                 <h1>Rompa o Silêncio.</h1>
-                <p>O feminicídio é evitável. Conhecer os sinais salva vidas.</p>
-                <button onclick="changePage('dados')" class="btn-proximo">Ver Estatísticas →</button>
+                <p>A violência doméstica não é apenas física; ela é o controle pelo medo. Entenda os sinais e proteja vidas.</p>
+                <button onclick="changePage('dados')" class="btn-main">ENTRAR NO PORTAL →</button>
             </div>
         </section>
 
         <section id="dados" class="page">
-            <h2 class="section-title">O Aumento dos Casos</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3 class="counter" data-target="1463">0</h3>
-                    <p>Feminicídios em 2023 (Recorde)</p>
+            <div class="overlay"></div>
+            <div class="content-wrap">
+                <h2 class="section-title">Estatísticas Reais</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="1463">0</h3>
+                        <p>Feminicídios em 2023. O maior número da história do Brasil.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="70">0</h3>
+                        <p>% das mortes ocorrem dentro da própria casa da vítima.</p>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3 class="counter" data-target="70">0</h3>
-                    <p>% ocorrem dentro de casa</p>
-                </div>
+                <button onclick="changePage('ciclo')" class="btn-main">VER SINAIS DE ALERTA →</button>
             </div>
-            <p class="texto-informativo">O Brasil registrou um aumento de 1,6% nos casos. A maioria das vítimas não possuía medidas protetivas.</p>
         </section>
 
         <section id="ciclo" class="page">
-            <h2 class="section-title">As Três Fases do Ciclo</h2>
-            <div class="ciclo-lista">
-                <div class="fase-item"><strong>1. Tensão:</strong> Ameaças e humilhações.</div>
-                <div class="fase-item"><strong>2. Explosão:</strong> A agressão física ou grave.</div>
-                <div class="fase-item"><strong>3. Lua de Mel:</strong> O falso arrependimento.</div>
+            <div class="overlay"></div>
+            <div class="content-wrap">
+                <h2 class="section-title">O Ciclo da Violência</h2>
+                <div class="ciclo-grid">
+                    <div class="fase-card">
+                        <div class="fase-num">1</div>
+                        <h4>Tensão</h4>
+                        <p>Humilhações e ciúme excessivo. O agressor cria um ambiente de medo constante.</p>
+                    </div>
+                    <div class="fase-card">
+                        <div class="fase-num">2</div>
+                        <h4>Explosão</h4>
+                        <p>Ocorre o ataque físico ou verbal grave. É o momento de maior risco iminente.</p>
+                    </div>
+                    <div class="fase-card">
+                        <div class="fase-num">3</div>
+                        <h4>Lua de Mel</h4>
+                        <p>Ele pede perdão e promete mudar. É uma armadilha para manter a vítima presa.</p>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
         <section id="ajuda" class="page">
-            <h2 class="section-title">Onde buscar ajuda?</h2>
-            <div class="contatos-grid">
-                <div class="card-ajuda">
-                    <h3>Ligue 180</h3>
-                    <p>Central de Atendimento à Mulher</p>
-                </div>
-                <div class="card-ajuda">
-                    <h3>Ligue 190</h3>
-                    <p>Polícia Militar (Emergências)</p>
+            <div class="overlay"></div>
+            <div class="content-wrap">
+                <h2 class="section-title">Canais de Socorro</h2>
+                <p class="instrucao">Clique nos botões abaixo para saber como cada canal atua.</p>
+                <div class="ajuda-grid">
+                    <div class="ajuda-card" onclick="interagirContato('180')">
+                        <img src="https://img.icons8.com/ios-filled/100/ffffff/phone.png" alt="Ícone Telefone">
+                        <h3>DISQUE 180</h3>
+                        <p>Orientação e Denúncia</p>
+                    </div>
+                    <div class="ajuda-card highlight" onclick="interagirContato('190')">
+                        <img src="https://img.icons8.com/ios-filled/100/ffffff/police-badge.png" alt="Ícone Polícia">
+                        <h3>LIGUE 190</h3>
+                        <p>Emergência Policial</p>
+                    </div>
                 </div>
             </div>
         </section>
